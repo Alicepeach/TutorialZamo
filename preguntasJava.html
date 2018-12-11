@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Belleza, Tips">
+  <title>Tutorial</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Assistant:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery.js"></script>
+</head>
+<body class ="fondoEmergencia">
+  <div class = "emergenciaJava">
+    <center><h3>Cuestionario</h3></center>
+  </div>
+
+  <div class="contenedor">
+    <ul>
+      <div id = 'pregunta1' class = "preguntasTitulos"></div>
+      <div id = 'respuestas1' class = "preguntasOpciones"></div>
+      <br>
+      <div id = 'pregunta2' class = "preguntasTitulos"></div>
+      <div id = 'respuestas2' class = "preguntasOpciones"></div>
+      <br>
+      <div id = 'pregunta3' class = "preguntasTitulos"></div>
+      <div id = 'respuestas3' class = "preguntasOpciones"></div>
+      <br>
+      <div id = 'pregunta4' class = "preguntasTitulos"></div>
+      <div id = 'respuestas4' class = "preguntasOpciones"></div>
+      <br>
+      <div id = 'pregunta5' class = "preguntasTitulos"></div>
+      <div id = 'respuestas5' class = "preguntasOpciones"></div>
+      <br>
+      <div id = 'pregunta6' class = "preguntasTitulos"></div>
+      <div id = 'respuestas6' class = "preguntasOpciones"></div>
+      <br>
+      <div id = 'pregunta7' class = "preguntasTitulos"></div>
+      <div id = 'respuestas7' class = "preguntasOpciones"></div>
+      <br>
+      <div id = 'pregunta5' class = "preguntasTitulos"></div>
+      <div id = 'respuestas5' class = "preguntasOpciones"></div>
+      <br>
+      <div id = 'pregunta8' class = "preguntasTitulos"></div>
+      <div id = 'respuestas8' class = "preguntasOpciones"></div>
+      <br>
+      <div id = 'pregunta9' class = "preguntasTitulos"></div>
+      <div id = 'respuestas9' class = "preguntasOpciones"></div>
+      <br>
+      <div id = 'pregunta10' class = "preguntasTitulos"></div>
+      <div id = 'respuestas10' class = "preguntasOpciones"></div>
+      <br>
+      <br>
+      <input type="button" class = "boton-personalizado-2" value= "Calificar" onclick="comprobar()">
+      <a href="preguntas.html" class = "boton-personalizado-2">Terminar la prueba</a>
+    </ul>
+  </div>
+
+
+  <script>
+    var correctas = 0;
+
+    function incisos(numeritoAleatorio) {
+      var posibilidades = "";
+      for( var i = 0; i < arregloDeRespuestas[numeritoAleatorio].length; i ++){
+        posibilidades += '<input type="radio" name = "preguntitas'+numeritoAleatorio+'" value= "'+i+'"><label>'+ arregloDeRespuestas[numeritoAleatorio][i] + '</label><br>';
+      }
+      return posibilidades;
+    }
+
+    var arregloDePreguntas = [
+    '<br>Supóngase que ha de colocarse tres sortijas en cuatro dedos, de forma en que en un mismo dedo se pueda colocar más de una, ¿cuál es el número de combinaciones posibles que puede hacer?','<br>¿Cuál de las afirmaciones es correcta?','<br>Sea A = {a,b,c}, ¿cuál de los siguientes incisos es una variación con repetición monaria?', '<br>Sea A = {a,b,c}, ¿cuál de los siguientes incisos es una variación ternaria?', '<br>Sea A = {a, b, c}, ¿cuál es el valor de la permutación simple?', '<br>Sea A = {a, b, c}, ¿cuál es el valor de la permutación simple suponiendo que en la liga de fútbol existieran 14 partidos en cada jornada de campeonato, ¿cuántas quinielas sería necesario complementar para tener la certeza de conseguir un pleno?', '<br>Si deseáramos conocer el total de formas en que puede insertarse 10 adornos en una pulsera:', '<br>Supongamos que fuera: S = ( a b c d )/( d a b c ), ¿cuál sería el resultado de las permutaciones?', '<br>Sea A = {1, 2, 3}, ¿cuáles son sus combinaciones monarias?', '<br>Si fuera A = {1,2,3,4,5}, ¿cuáles son sus combinaciones monarias?','<br>El análisis combinatorio es también conocido como…<br>','<br>¿Para qué sirve el análisis combinatorio?<br>','<br>Para poder aplicar la regla de la suma es necesario que los sucesos entre los conjuntos A y B sean:<br>','<br>Para poder aplicar la regla del producto es necesario que los sucesos entre los conjuntos A y B sean:<br>','<br>El principio de Dirichlet está basado en:<br>','<br>¿Cómo se denomina al coeficiente de: <center><img src="img/captura14.png"></center><br>','<br>¿Quién fue el precursor de los números combinatorios?<br>', '<br>¿A qué se debe el nombre de “coeficiente binómico”?<br>','<br>¿De qué orden es una combinación simple?<br>','<br>¿Qué tipo de problemas resuelve la inducción matemática?<br>','<br>El principio de inducción es aplicable a números…<br>','<br>El axioma de Peano permite construir los números…<br>','<br>La definición formal de inducción matemática expresa que si la expresión es válida para n, debe serlo para:<br>','<br>Las demostraciones por recursión aplican a los números…<br>','<br>¿En qué tipo de definición deben basarse las demostraciones de tipo recursivas?<br>','<br>El principio de demostración por recursividad pretende demostrar que:','<br>Una escuela ofrece la posibilidad de cursar 10 asignaturas de matemáticas, 3 de lenguaje y 4 de historia. Si un alumno hace su planificación de tal manera que las dos primeras asignaturas sean matemáticas, luego lenguajes y las últimas dos, historia, ¿de cuántas maneras puede llevarse a cabo esta planificación?<br>','<br>¿Cuántas personas en una población de 200, ha nacido en la misma semana del año?<br>', '<br>Sea el conjunto A = {1,2,3,4,5,6,8,9}, ¿cuántas combinaciones posibles se puede lograr al hacer grupos de 5 cifras?<br>','<br>Suponiendo que en una exhibición aeronáutica se presentan 2 helicópteros, 3 monoplanos y 4 reactores, ¿cuál el número de formas diferentes en las que es posible colocar todos estos aparatos?<br>'];
+
+    var arregloDeRespuestas = [
+    ['Se trataría de formar grupos de tres sortijas, aunque sean iguales, y colocarlas en los cuatro dedos: V4,3 = 4^3 = 64 maneras de colocar las 3 sortijas en los 4 dedos.', 'Se trataría de formar grupos de cuatro dedos diferentes que se multiplican por el número de sortijas que pueden utilizar cada uno V4,3 =  4x3 = 12 maneras de colocar las 3 sortijas en los 4 dedos.', 'Como todos los dedos son diferentes, y no se especifica si necesariamente deben utilizarse todas las sortijas, entonces la combinación puede ser V4,3 =  1x2x3 = 6 maneras de colocar las sortijas en los 4 dedos.', 'Como se tienen 2 manos y en total son 10 dedos, podemos multiplicar el grupo de 4 dedos diferentes por el número de sortijas V4,3 =  10x4x3 = 120 maneras de colocar las 3 sortijas en los 4 dedos.'],['Las variaciones binarias con repetición no están constituídas a partir de las monarias.', 'Las variaciones con repeticiones monarias son las mismas que las simples.', 'Las variaciones ternarias no consideran todas las posibilidades existentes.','La permutación simple no considera cada que contengan todos los elementos en los distintos grupos que pueden formarse.'],['aa  ab  ac, ba  bb bc, ca  cb  cc', 'aaa  aab  baa bab bac caa cab cac aba  abb  bbc bba bbb cba cbb cbc aca  acb acc bca bcb bcc cca ccb ccc', 'abc, acb, bac, bca, cab, cba','a,b,c'],['aa  ab  ac, ba  bb bc, ca  cb  cc', 'aaa  aab  baa bab bac caa cab cac aba  abb  bbc bba bbb cba cbb cbc aca  acb acc bca bcb bcc cca ccb ccc', 'abc, acb, bac, bca, cab, cba','a,b,c'],['P3 = V3,3 = 3*2*1 = 6', 'P3 = V1,3 = 3*2*1 = 6','P3 = V3,3 = 3*3*3= 27 ','P3 = V1,3 = 3*3*3 = 27'],['4 728 543', '5 687 952','5 890 003','4 782 969'],['(P10)= 10!', 'P(9)= 10!','P(10)= 9!','P(9)= 9!'],['S(P) = a c d b', 'S(P) = aa cc dd bb','S(P) = ac db','S(P) = acdb'],['3,2,1', '12,13,23','123','121323'],['5', '9','10','15'],['Simple combinatoria','Colectivo','Permutación','Correspondencia'],['Para enlistar los elementos de un conjunto', 'Para enumerar los elementos de un conjunto','Para conocer la correspondencia biunívoca','Para evitar enlistar y enumerar los elementos de un conjunto'],['Disjuntos','Iguales','Distintos','Explícitos'],['Explícitos', 'Independientes entre sí','Válidos','Disjuntos'],['Principio restringido', 'Principio de hipótesis','Principio de análisis','Principio de las cajas'],['Coeficiente restringido', 'Coeficiente de contradicción','Coeficiente de cocientes','Coeficiente binomial o número combinatorio'],['Tales de Mileto','Arquímedes','Euler','Euclides'],['Al desarrollo de binomios del tipo: (a + b)^n', 'Al desarrollo de binomios del tipo: (a)^m','Al desarrollo de binomios del tipo: (a + b)^m','Al desarrollo de binomios del tipo: (b)^m'],['Orden n-aria de m elementos','Orden nxm','Orden Cm,n','Orden dos'],['Finitos', 'Infinitos','De dominio','De recursión'],['Reales','Complejos','Naturales','Reales negativos'],['Reales','Complejos','Naturales','Reales negativos'],['n-1','n+3','n^2','n/1'],['Todos los números','Números complejos','Números naturales','Números reales'],['De rango','De dominio','De premisas','De demostraciones'],['Para todo x, P(x) es cierta', 'Que todas las sucesiones G son finitas','Que existen números que satisfacen G(x,y)','Que el dominio está bien fundado'],['10^7=10 000 000','10*9 = 90','10*9*3*4*3 = 3243','2*3*4 = 24'],['200/52 = [3, 8]', '52/200 = [8, 3]','12/52 = [3, 8]','52/12 = [3, 8]'],['2520','2736','1789','4253'],['1260', '2240','1587','1235']];
+
+    var arregloDeIncisosRespuestasCorrectas= ['0', '1', '3', '3', '1','3', '2', '0', '0', '2','2','2','2','2','2','2','2','2','2','2','2','2','0','0','1','0','2','0','0','1'];
+
+    /*Validación de preguntas aleatorias no repetidas*/
+    var cantidadNumeros = arregloDePreguntas.length;
+    var arregloDeAleatorios = []
+    while(arregloDeAleatorios.length < cantidadNumeros ){
+      var numeroAleatorio = Math.floor(Math.random()*cantidadNumeros);
+      var existe = false;
+      for(var i=0;i<arregloDeAleatorios.length;i++){
+        if(arregloDeAleatorios [i] == numeroAleatorio){
+          existe = true;
+          break;
+        }
+      }
+      if(!existe){
+        arregloDeAleatorios[arregloDeAleatorios.length] = numeroAleatorio;
+      }
+    }
+
+  /*document.write("números aleatorios : " + arregloDeAleatorios);*/
+
+    var aleatorio1 = arregloDeAleatorios[0];
+    var aleatorio2 = arregloDeAleatorios[1];
+    var aleatorio3 = arregloDeAleatorios[2];
+    var aleatorio4 = arregloDeAleatorios[3];
+    var aleatorio5 = arregloDeAleatorios[4];
+    var aleatorio6 = arregloDeAleatorios[5];
+    var aleatorio7 = arregloDeAleatorios[6];
+    var aleatorio8 = arregloDeAleatorios[7];
+    var aleatorio9 = arregloDeAleatorios[8];
+    var aleatorio10 = arregloDeAleatorios[9];
+    var aleatorio11 = arregloDeAleatorios[10];
+    var aleatorio12 = arregloDeAleatorios[11];
+    var aleatorio13 = arregloDeAleatorios[12];
+    var aleatorio14 = arregloDeAleatorios[13];
+    var aleatorio55 = arregloDeAleatorios[14];
+    var aleatorio16 = arregloDeAleatorios[15];
+    var aleatorio17 = arregloDeAleatorios[16];
+    var aleatorio18 = arregloDeAleatorios[17];
+    var aleatorio19 = arregloDeAleatorios[18];
+    var aleatorio20 = arregloDeAleatorios[19];
+    var aleatorio21 = arregloDeAleatorios[20];
+    var aleatorio22 = arregloDeAleatorios[21];
+    var aleatorio23 = arregloDeAleatorios[22];
+    var aleatorio24 = arregloDeAleatorios[23];
+    var aleatorio25 = arregloDeAleatorios[24];
+    var aleatorio26 = arregloDeAleatorios[25];
+    var aleatorio27 = arregloDeAleatorios[26];
+    var aleatorio28 = arregloDeAleatorios[27];
+    var aleatorio29 = arregloDeAleatorios[28];
+    var aleatorio20 = arregloDeAleatorios[29];
+    
+
+    document.getElementById('pregunta1').innerHTML = arregloDePreguntas[aleatorio1];
+    document.getElementById('respuestas1').innerHTML = incisos(aleatorio1);
+
+    document.getElementById('pregunta2').innerHTML = arregloDePreguntas[aleatorio2];
+    document.getElementById('respuestas2').innerHTML = incisos(aleatorio2);
+
+    document.getElementById('pregunta3').innerHTML = arregloDePreguntas[aleatorio3];
+    document.getElementById('respuestas3').innerHTML = incisos(aleatorio3);
+
+    document.getElementById('pregunta4').innerHTML = arregloDePreguntas[aleatorio4];
+    document.getElementById('respuestas4').innerHTML = incisos(aleatorio4);
+
+    document.getElementById('pregunta5').innerHTML = arregloDePreguntas[aleatorio5];
+    document.getElementById('respuestas5').innerHTML = incisos(aleatorio5);
+
+    document.getElementById('pregunta6').innerHTML = arregloDePreguntas[aleatorio6];
+    document.getElementById('respuestas6').innerHTML = incisos(aleatorio6);
+
+    document.getElementById('pregunta7').innerHTML = arregloDePreguntas[aleatorio7];
+    document.getElementById('respuestas7').innerHTML = incisos(aleatorio7);
+
+    document.getElementById('pregunta8').innerHTML = arregloDePreguntas[aleatorio8];
+    document.getElementById('respuestas8').innerHTML = incisos(aleatorio8);
+
+    document.getElementById('pregunta9').innerHTML = arregloDePreguntas[aleatorio9];
+    document.getElementById('respuestas9').innerHTML = incisos(aleatorio9);
+
+    document.getElementById('pregunta10').innerHTML = arregloDePreguntas[aleatorio10];
+    document.getElementById('respuestas10').innerHTML = incisos(aleatorio10);
+
+    document.getElementById('pregunta11').innerHTML = arregloDePreguntas[aleatorio11];
+    document.getElementById('respuestas11').innerHTML = incisos(aleatorio11);
+
+    document.getElementById('pregunta12').innerHTML = arregloDePreguntas[aleatorio12];
+    document.getElementById('respuestas12').innerHTML = incisos(aleatorio12);
+    
+    document.getElementById('pregunta13').innerHTML = arregloDePreguntas[aleatorio13];
+    document.getElementById('respuestas13').innerHTML = incisos(aleatorio13);
+
+    document.getElementById('pregunta14').innerHTML = arregloDePreguntas[aleatorio14];
+    document.getElementById('respuestas14').innerHTML = incisos(aleatorio14);
+    
+    document.getElementById('pregunta15').innerHTML = arregloDePreguntas[aleatorio15];
+    document.getElementById('respuestas15').innerHTML = incisos(aleatorio15);
+    
+    document.getElementById('pregunta16').innerHTML = arregloDePreguntas[aleatorio16];
+    document.getElementById('respuestas16').innerHTML = incisos(aleatorio16);
+
+    document.getElementById('pregunta17').innerHTML = arregloDePreguntas[aleatorio17];
+    document.getElementById('respuestas17').innerHTML = incisos(aleatorio17);
+
+    document.getElementById('pregunta18').innerHTML = arregloDePreguntas[aleatorio18];
+    document.getElementById('respuestas18').innerHTML = incisos(aleatorio18);
+    
+    document.getElementById('pregunta19').innerHTML = arregloDePreguntas[aleatorio19];
+    document.getElementById('respuestas19').innerHTML = incisos(aleatorio19);
+    
+    document.getElementById('pregunta20').innerHTML = arregloDePreguntas[aleatorio20];
+    document.getElementById('respuestas20').innerHTML = incisos(aleatorio20);
+
+    document.getElementById('pregunta21').innerHTML = arregloDePreguntas[aleatorio21];
+    document.getElementById('respuestas21').innerHTML = incisos(aleatorio21);
+
+    document.getElementById('pregunta22').innerHTML = arregloDePreguntas[aleatorio22];
+    document.getElementById('respuestas22').innerHTML = incisos(aleatorio22);
+    
+    document.getElementById('pregunta23').innerHTML = arregloDePreguntas[aleatorio23];
+    document.getElementById('respuestas23').innerHTML = incisos(aleatorio23);
+
+    document.getElementById('pregunta24').innerHTML = arregloDePreguntas[aleatorio24];
+    document.getElementById('respuestas24').innerHTML = incisos(aleatorio24);
+    
+    document.getElementById('pregunta25').innerHTML = arregloDePreguntas[aleatorio25];
+    document.getElementById('respuestas25').innerHTML = incisos(aleatorio25);
+    
+    document.getElementById('pregunta26').innerHTML = arregloDePreguntas[aleatorio26];
+    document.getElementById('respuestas26').innerHTML = incisos(aleatorio26);
+
+    document.getElementById('pregunta27').innerHTML = arregloDePreguntas[aleatorio27];
+    document.getElementById('respuestas27').innerHTML = incisos(aleatorio27);
+
+    document.getElementById('pregunta28').innerHTML = arregloDePreguntas[aleatorio28];
+    document.getElementById('respuestas28').innerHTML = incisos(aleatorio28);
+    
+    document.getElementById('pregunta29').innerHTML = arregloDePreguntas[aleatorio29];
+    document.getElementById('respuestas29').innerHTML = incisos(aleatorio29);
+    
+    document.getElementById('pregunta30').innerHTML = arregloDePreguntas[aleatorio30];
+    document.getElementById('respuestas30').innerHTML = incisos(aleatorio30);
+
+    var correctas = 0;
+
+    function calificacion(arregloAleatorios){
+      for (var i = 0; i < arregloAleatorios.length; i++) {
+        var respuesta = $("input[name=preguntitas"+arregloAleatorios[i]+"]:checked").val();
+        if (respuesta == arregloDeIncisosRespuestasCorrectas[arregloAleatorios[i]]){
+          correctas++;
+        }
+      }
+      alert('tu calificación es:'+correctas);
+    }
+
+    function comprobar(){
+      calificacion(arregloDeAleatorios);
+    }
+  </script>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/app.js"></script>
+</html>

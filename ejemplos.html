@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Belleza, Tips">
+  <title>Tutorial</title>
+  <link rel ="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Assistant:300" rel="stylesheet">
+</head>
+<body>
+  <div class = "colorcito2">
+    <center><h3>Estructuras discretas</h3></center>
+  </div>
+  <nav>
+    <div class= "row colorcito1">
+      <div class = "col s11">
+        <div class="nav-wrapper">
+          <a href="index.html" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html"><span class = "letraDiseño">Inicio</span></a></li>
+            <li><a href="objetivo.html"><span class = "letraDiseño">Objetivo</span></a></li>
+            <li><a href="teoria.html"><span class = "letraDiseño">Teoría</span></a></li>
+            <li><a href="preguntas.html"><span class = "letraDiseño">Preguntas</span></a></li>
+            <li><a href="ejemplos.html"><span class = "letraDiseño">Ejemplos</span></a></li>
+            <li><a href="video.html"><span class = "letraDiseño">Video</span></a></li>
+            <li><a href="bibliografia.html"><span class = "letraDiseño">Bibliografía</span></a></li> 
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <ul class="sidenav #852996 pink lighten-5" id="mobile-demo">
+   <li><a href="index.html"><span class = "letraDiseño">Inicio</span></a></li>
+   <li><a href="objetivo.html"><span class = "letraDiseño">Objetivo</span></a></li>
+   <li><a href="teoria.html"><span class = "letraDiseño">Teoría</span></a></li>
+   <li><a href="preguntas.html"><span class = "letraDiseño">Preguntas</span></a></li>
+   <li><a href="ejemplos.html"><span class = "letraDiseño">Ejemplos</span></a></li>
+   <li><a href="video.html"><span class = "letraDiseño">Video</span></a></li>
+   <li><a href="bibliografia.html"><span class = "letraDiseño">Bibliografía</span></a></li> 
+ </ul>
+ <div class="container">
+   <h1 class = "titulosGenerales">Ejemplos</h1>
+   <br>
+   <h1 class = "subtitulosGenerales">Ejemplo 1</h1>
+
+   <p>Si tuviéramos una baraja española y A es el suceso de “sacar un as” y B "sacar un rey". ¿Qué cantidad de formas posibles existen de sacar un as o un rey?</p>
+   <p>Solución:</p>
+
+   <ul class="collapsible">
+    <li>
+      <div class="collapsible-header e1">Paso 1</div>
+      <div class="collapsible-body"><span>Como sabemos existen cuatro ases y cuatro reyes, el suceso de A se puede representar de 4 maneras diferentes y lo mismo ocurre con el B.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header e2">Paso 2</div>
+      <div class="collapsible-body"><span>Como los sucesos no pueden producirse de forma simultánea, ya que o se saca as o se saca rey.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header e3">Paso 3</div>
+      <div class="collapsible-body"><span>El total de maneras sería:<br> 4 + 4 = 8</span></div>
+    </li>
+  </ul>
+  <br>
+  <h1 class = "subtitulosGenerales">Ejemplo 2</h1>
+  
+  <p>Un alumno que estudia lenguajes de programación ha comprado 4 libros por cada uno de los siguientes lenguajes: C, Fortran y Cobol. Desea saber cuántas posibles combinaciones de ellos pueden hacerse.</p>
+  <p>Solución:</p>
+  <ul class="collapsible">
+    <li>
+      <div class="collapsible-header e1">Paso 1</div>
+      <div class="collapsible-body"><span>Como sabemos el alumno tiene 3 libros y puede hacer combinaciones de 4 diferentes libros</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header e2">Paso 2</div>
+      <div class="collapsible-body"><span>Por lo tanto, podemos multiplicar 3 veces 4. Esto daría como resultado el número de libros diferentes que combina cada vez que los toma.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header e3">Paso 3</div>
+      <div class="collapsible-body"><span>El total combinaciones sería:<br> 4 + 4 + 4 = 12 libros diferentes alternados.</span></div>
+    </li>
+  </ul>
+  <h1 class = "subtitulosGenerales">Ejemplo 3</h1>
+  <p>Solución:</p>
+  <p>Si tuviéramos una baraja española con 12 cartas por palo y considerando que A es el suceso "sacar un as" y B "sacar una espada". ¿De cuántas maneras se podría sacar un as o una espada?</p>
+
+  <ul class="collapsible">
+    <li>
+      <div class="collapsible-header e1">Paso 1</div>
+      <div class="collapsible-body"><span>Como existen cuatro ases en la baraja y doce cartas del palo espadas, podríamos pensar que la respuesta válida es la siguiente:<br><center>4+12=16</center>
+      formas posibles de sacar una as o una espada, pero el razonamiento no es correcto.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header e2">Paso 2</div>
+      <div class="collapsible-body"><span>Los dos sucesos A y B no son excluyentes ya que se puede obtener en la extracción el as de espadas.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header e3">Paso 3</div>
+      <div class="collapsible-body"><span>Por ello es necesario realizar la siguiente resta:<br><center>4+12-1 = 15</center></span></div>
+    </li>
+  </ul>
+  <h1 class = "subtitulosGenerales">Ejemplo 4</h1>
+  <p>Sabiendo que la información de una computadora es almacenada en la memoria principal en lo que se conoce como celdas o posiciones de memoria, de forma que a cada posición le es asignada una dirección compuesta de ocho símbolos. Cada uno de ellos es un dígito binario 0 o 1 denominado bit.</p>
+  <p>Solución:</p>
+  <ul class="collapsible">
+    <li>
+      <div class="collapsible-header b1">Paso 1</div>
+      <div class="collapsible-body"><span>El conjunto de ocho bits se conoce como byte. El número total de bytes diferentes que se puede formar se obtiene aplicando la regla del producto considerando que en cada posición sólo puede existir dos alternativas: el 0 o el 1.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header b2">Paso 2</div>
+      <div class="collapsible-body"><span>Se obtiene así:<br><center>2*2*2*2*2*2*2*2* = 2^8 = 256</center><br>posiciones de memoria distintas.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header b3">Paso 3</div>
+      <div class="collapsible-body">Otros ordenadores emplean direcciones de dos bytes. En estos casos las posiciones se conocen como direccionales y existirían alrededor de:<br><br><center>2^8*2^8 = 256*256 = 65 536</center><br>posiciones de memoria distintas.
+      </div>
+    </li>
+  </ul>
+  <h1 class ="subtitulosGenerales">Ejemplo 5</h1>
+  <p>Si A = {1, 2, 3}:</p>
+  <p>Solución:</p>
+  <ul class="collapsible">
+    <li>
+      <div class="collapsible-header e1">Paso 1</div>
+      <div class="collapsible-body"><span>Las combinaciones monarias (de un solo elemento) serían por ejemplo: 3,2,1.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header e2">Paso 2</div>
+      <div class="collapsible-body"><span>Binarias (de dos elementos) serían: 12, 13 , 23.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header e3">Paso 3</div>
+      <div class="collapsible-body">De orden 3 únicamente existe la agrupación: 123.</div>
+    </li>
+  </ul>
+
+  <h1 class = "subtitulosGenerales">Ejemplo 6</h1>
+  <p>Si fuera A = {1, 2, 3, 4, 5}, las combinaciones ternarias serían:</p>
+  <p>Solución:</p>
+  <ul class="collapsible">
+    <li>
+      <div class="collapsible-header e1">Paso 1</div>
+      <div class="collapsible-body"><img src="img/captura9.PNG" alt=""></div>
+    </li>
+    <li>
+      <div class="collapsible-header e2">Paso 2</div>
+      <div class="collapsible-body"><img src="img/captura10.PNG" alt=""></div>
+    </li>
+    <li>
+      <div class="collapsible-header e3">Paso 3</div>
+      <div class="collapsible-body">El resultado es: 10</div>
+    </li>
+  </ul>
+<h1 class = "subtitulosGenerales">Ejemplo 7</h1>
+  <p><img src="img/captura8.PNG" alt=""></p>
+  <p>Solución:</p>
+  <ul class="collapsible">
+    <li>
+      <div class="collapsible-header e1">Paso 1</div>
+      <div class="collapsible-body"><img src="img/captura6.PNG" alt=""></div>
+    </li>
+    <li>
+      <div class="collapsible-header e2">Paso 2</div>
+      <div class="collapsible-body"><img src="img/captura7.PNG" alt=""></div>
+    </li>
+  </ul>
+  <h1 class = "subtitulosGenerales">Ejemplo 8</h1>
+
+  <p>Sea calcular 3+2  con los axiomas de Peano. Es decir, S(S(S(0))) +S(S(0)):</p>
+  <p>Solución:</p>
+  <ul class="collapsible">
+    <li>
+      <div class="collapsible-header e1">Paso 1</div>
+      <div class="collapsible-body"><img src="img/captura3.PNG" alt=""></div>
+    </li>
+    <li>
+      <div class="collapsible-header e2">Paso 2</div>
+      <div class="collapsible-body"><img src="img/captura4.PNG" alt=""></div>
+    </li>
+    <li>
+      <div class="collapsible-header e3">Paso 3</div>
+      <div class="collapsible-body"><img src="img/captura5.PNG" alt=""></div>
+    </li>
+  </ul>
+  <h2 class ="subtitulosGenerales">Ejemplo 9</h2>
+  <p>Demostrar que para todo n es 2(n+2)<=(n+2)^2:</p>
+  <p>Solución:</p>
+  <ul class="collapsible">
+    <li>
+      <div class="collapsible-header b1">Paso 1</div>
+      <div class="collapsible-body"><img src="img/captura1.PNG" alt=""></div>
+    </li>
+    <li>
+      <div class="collapsible-header b2">Paso 2</div>
+      <div class="collapsible-body"><span><img src="img/captura2.PNG" alt=""></span></div>
+    </li>
+    <li>
+      <div class="collapsible-header b3">Paso 3</div>
+      <div class="collapsible-body">Dado que se ha demostrado la base inductiva y el paso inductivo, está permitido concluir que para todo n es 2(n+2)<=((n+2)^2).</div>
+    </li>
+  </ul>
+
+  <h2 class = "subtitulosGenerales">Ejemplo 10</h2>
+
+  <p>Como premisa X es una persona. Si X es una persona, entonces todas las siguientes personas son descendientes de X.</p>
+  <p>Solución:</p>
+  <ul class="collapsible">
+    <li>
+      <div class="collapsible-header b1">Paso 1</div>
+      <div class="collapsible-body"><span>Todos los hijos de X son descendientes de X.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header b2">Paso 2</div>
+      <div class="collapsible-body"><span>Si y es un descendiente de x, entonces todos los descendientes de y son descendientes de X. No hay nadie más que sea descendiente de X.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header b3">Paso 3</div>
+      <div class="collapsible-body">En este ejemplo, existe una premisa para decir de forma repetida siempre y cuando haya un individuo que sea descendiente, o bien, cuando hay personas a las que ya no les es aplicable la definición.
+      </div>
+    </li>
+  </ul>
+</div>
+</body>
+<footer class = "page-footer colorcito2">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text"><span class = "letraFooter">Contáctanos</span></h5>
+        <p class="grey-text text-lighten-4">Para obtener mayor información dirígete a la Sala de Multimedia ubicada en:</p>
+        <ul>
+          <li>Edificio Q "Luis G. Valdés", salón Q006, Planta Baja, Facultad de ingeniería, UNAM.</li>
+        </ul>
+      </div>
+      <div class="col l4 offset-l1 s12">
+        <h5 class="white-text"><span class = "letraFooter"></span></h5>
+        <ul>
+          <img src="img/escudo49.png" class = "tamañoEscudo">
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      © 2018 Copyright 
+    </div>
+  </div>
+</footer>
+<script src="js/jquery.js"></script>
+<script src="js/materialize.js"></script>
+<!--<script src="js/materialize.min.js"></script>-->
+<script src="js/app.js"></script>
+</html>

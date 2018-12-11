@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Belleza, Tips">
+  <title>Tutorial</title>
+  <link rel ="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Assistant:300" rel="stylesheet">
+</head>
+<body>
+  <div class = "colorcito2">
+    <center><h3>Estructuras discretas</h3></center>
+  </div>
+  <nav>
+    <div class= "row colorcito1">
+      <div class = "col s11">
+        <div class="nav-wrapper">
+          <a href="index.html" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html"><span class = "letraDiseño">Inicio</span></a></li>
+            <li><a href="objetivo.html"><span class = "letraDiseño">Objetivo</span></a></li>
+            <li><a href="teoria.html"><span class = "letraDiseño">Teoría</span></a></li>
+            <li><a href="preguntas.html"><span class = "letraDiseño">Preguntas</span></a></li>
+            <li><a href="ejemplos.html"><span class = "letraDiseño">Ejemplos</span></a></li>
+            <li><a href="video.html"><span class = "letraDiseño">Video</span></a></li>
+            <li><a href="bibliografia.html"><span class = "letraDiseño">Bibliografía</span></a></li> 
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <ul class="sidenav #852996 pink lighten-5" id="mobile-demo">
+   <li><a href="index.html"><span class = "letraDiseño">Inicio</span></a></li>
+   <li><a href="objetivo.html"><span class = "letraDiseño">Objetivo</span></a></li>
+   <li><a href="teoria.html"><span class = "letraDiseño">Teoría</span></a></li>
+   <li><a href="preguntas.html"><span class = "letraDiseño">Preguntas</span></a></li>
+   <li><a href="ejemplos.html"><span class = "letraDiseño">Ejemplos</span></a></li>
+   <li><a href="video.html"><span class = "letraDiseño">Video</span></a></li>
+   <li><a href="bibliografia.html"><span class = "letraDiseño">Bibliografía</span></a></li> 
+ </ul>
+ 
+ <main class = "container ">
+  <ul class="pagination">
+    <li class="active"><a href="teoria.html">Análisis combinatorio y notación</a></li>
+    <li class="waves-effect"><a href="teoria3.html">Inducción y recursión</a></li>
+  </ul>
+  <h1 class = "titulosGenerales">Análisis combinatorio</h1>
+  <br>
+  <h2 class = "subtitulosGenerales">¿Qué es el análisis combinatorio?</h2>
+  <br>
+  <p class = "parrafos">El análisis combinatorio también conocido como simple combinatoria:
+  </p>
+  <p class = "container citas">"Es la técnica de saber cuántos objetos hay en un colectivo sin realmente tener que contarlos."</p>
+  <p class = "parrafos">Con ello evitaremos enumerar a todos los elementos y enlistarlos para poder conocer la cantidad existente ahorrando tiempo y recursos.</p>
+  <p class = "parrafos">Esta técnica se basa en la correspondencia “uno a uno” o biunívoca entre dos conjuntos. Los primeros corresponden a los elementos a ser contados y el otro conjunto a los números naturales que servirán de apoyo a los primeros.</p>
+  <p class = "parrafos">El estudio de este tipo de análisis requiere de dos principios básicos del conteo: <i>la regla de la suma y la regla del producto.</i> Estas reglas serán de gran utilidad para resolver problemas en donde se ve involucrado el conteo sin necesidad de recurrir a la numeración explícita de cada uno de los elementos que constituyen el conjunto.</p>
+  <p class = "parrafos"> Existe otro principio en el que podremos apoyarnos cuando el problema sea más complicado; consisten en dividirlo en dos partes, lo que nos permitirá resolver cada una aplicando los primeros dos ya sea de forma combinada o separada.</p>
+  <h2 class="subtitulosPeques">Regla de la suma</h2>
+  <p class = "container citas">Si A y B son dos conjuntos finitos y disyuntos, el total de elementos existentes en AUB, cardinalidad de la unión, es la suma del total de elementos que posea A, cardinalidad del primer conjunto, y de total de elementos de B.</p>
+  <p>Este hecho puede expresarse de otra forma:</p>
+  <h6><i>Teorema</i></h6>
+  <p class = "container citas">
+    Supongamos que A y B son dos sucesos disjuntos, es decir, no se presentan al mismo tiempo. Si el suceso A se puede realizar de m maneras y el B de n, entonces el suceso A o el B se podrá realizar de m + n maneras distintas. 
+  </p>
+
+  <h2 class="subtitulosPeques">Regla del producto</h2>
+  <h6><i>Teorema</i></h6>
+  <p class = "container citas">Sea C un suceso que pueda descomponerse en dos etapas sucesivas A y B independientes entre sí. Supongamos que la etapa A se puede realizar de m maneras y que la B se puede realizar de n maneras, independientemente de cuál sea el resultado obtenido en la etapa A. Entonces el suceso C se podrá realizar de m.n maneras distintas siguiendo todas las formas posibles de las dos etapas citadas.</p>
+  <h1 class="subtitulosPeques"><i><center>Números combinatorios</center></i></h1>
+  <p class = "parrafos">Los números de la siguiente forma:</p>
+  <p class = "container citas">                
+   <center><img src="img/captura14.png"></center>
+  </p>
+  <p class = "parrafos">desempeñan un papel importante.</p>
+  <p class="parrafos">Definición:</p>
+  <p class="container citas">Sean m y n números enteros tales que 0 = < n = < m. Se denomina coeficiente binomial o número combinatorio, al cociente:
+  <p class = "container citas ">
+    <center><img src="img/captura15.png"></center>                
+  </p>
+  </p>
+  
+  <p class = "parrafos">que simbólicamente se representa por ( m  n ) y se lee “m sobre n”. 
+    Euler fue el precursor de esta nota, en donde m es quien representa al numerador y n al denominador del número combinatorio. El nombre de “coeficiente binómico” se debe a la gran importancia que estos tienen en el desarrollo de un binomio del tipo: (a + b)^m.
+    Este número combinatorio siempre es entero.
+  </p>
+  <h1 class="subtitulosPeques"><i><center>Combinaciones simples</center></i></h1>
+  <p class ="parrafos">En las definiciones anteriores, la base de la combinación de los grupos de elementos dependía en gran medida del orden de sucesión de sus elementos. El tipo de agrupación que estudiaremos a continuación analiza agrupaciones en las que el orden es diferente:</p>
+  <p>Definición:</p>
+  <p class ="container citas">"Sea un conjunto formado por m elementos distintos. Recibe el nombre de combinación simple de orden n o n-aria de esos m elementos a cada grupo formado por n elementos tomados de los m y tal que dos combinaciones se considerarán distintas si difieren en alguno de sus elementos. En esta ordenación no influye el orden de colocación, es decir, dos agrupaciones son la misma si contienen los mismos elementos colocados en distinto orden. En total de esos grupos ordenados se indica por Cm,n."</p>
+  <p class="parrafos"><i>Combinaciones monarias</i></p>
+  <p class="parrafos">Son grupos de un solo elemento:</p>
+  <p class ="container"><center>
+    <img src="img/captura11.png"></center>
+  </p>
+  <p class="parrafos"><i>Combinaciones binarias</i></p>
+  <p class="parrafos">Se forman añadiendo uno a uno los elementos del conjunto de partida:</p>
+  <p class ="container"><center>
+    <img src="img/captura12.png"></center>
+  </p>
+  <p class="parrafos"><i>Combinaciones ternarias</i></p>
+  <p class="parrafos">Parten de la definición de binarias, añadiendo uno a uno los elementos del conjunto:</p>
+  <p class ="container"><center>
+    <img src="img/captura13.png"></center>
+  </p>
+  <h1 class="subtitulosPeques"><i><center>Principio de Dirichlet</center></i></h1>
+  <br>
+  <p class="parrafos">El principio de Dirichlet dice:</p>
+  <p class ="container citas">"Si m objetos se colocan en n cajas, m>n, entonces, existe al menos una caja que contiene dos o más objetos (PRINCIPIO RESTRINGIDO)."
+  </p>
+  <p class = "parrafos"><i>Demostración</i></p>
+  <p class = "container citas">Suponiendo que ninguna de las cajas contuviera más de un objeto. Si el número de cajas es n, entonces el total de objetos sería como mucho n. Pero esto es sería una contradicción, puesto que, por hipótesis, existen m > n objetos. Por tanto, alguna caja debe contener más de un objeto.
+  </p>
+
+  <h1 class = "titulosGenerales">Notación</h1>
+  <br>
+  <p>A continuación se presenta la notación que es utilizada en el tema de "Análisis Combinatorio":</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Notación</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>p(n)</td>
+        <td>Número de particiones de n.</td>
+      </tr>
+      <tr>
+        <td>p(n,k)</td>
+        <td>Número de particiones de n que contienen exactamente k sumandos.</td>
+      </tr>
+      <tr>
+        <td>0CDI0 ¬ 0</td>
+        <td>En los problemas, O->objeto, C->contenedor, D ->distintivo,I->desapercibido.</td>
+      </tr>
+    </tbody>
+    <tr>
+      <td>. 0 ¬</td>
+      <td>Contendor que no está vacío.</td>
+    </tr>
+    <tr>
+      <td>S(n, k)</td>
+      <td>Número de Stirling del segundo tipo.</td>
+    </tr>
+    <tr>
+      <td>s(n, k)</td>
+      <td>Número de Stirling del primer tipo.</td>
+    </tr>
+  </table>
+<br><br><br>
+</main>
+</body>
+<footer class = "page-footer colorcito2">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text"><span class = "letraFooter">Contáctanos</span></h5>
+        <p class="grey-text text-lighten-4">Para obtener mayor información dirígete a la Sala de Multimedia ubicada en:</p>
+        <ul>
+          <li>Edificio Q "Luis G. Valdés", salón Q006, Planta Baja, Facultad de ingeniería, UNAM.</li>
+        </ul>
+      </div>
+      <div class="col l4 offset-l1 s12">
+        <h5 class="white-text"><span class = "letraFooter"></span></h5>
+        <ul>
+          <img src="img/escudo49.png" class = "tamañoEscudo">
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      © 2018 Copyright 
+    </div>
+  </div>
+</footer>
+<script src="js/jquery.js"></script>
+<script src="js/materialize.js"></script>
+<!--<script src="js/materialize.min.js"></script>-->
+<script src="js/app.js"></script>
+</html>

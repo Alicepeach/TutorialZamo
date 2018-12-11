@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Belleza, Tips">
+  <title>Tutorial</title>
+  <link rel ="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Assistant:300" rel="stylesheet">
+</head>
+<body>
+  <div class = "colorcito2">
+    <center><h3>Estructuras discretas</h3></center>
+  </div>
+  <nav>
+    <div class= "row colorcito1">
+      <div class = "col s11">
+        <div class="nav-wrapper">
+          <a href="index.html" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html"><span class = "letraDiseño">Inicio</span></a></li>
+            <li><a href="objetivo.html"><span class = "letraDiseño">Objetivo</span></a></li>
+            <li><a href="teoria.html"><span class = "letraDiseño">Teoría</span></a></li>
+            <li><a href="preguntas.html"><span class = "letraDiseño">Preguntas</span></a></li>
+            <li><a href="ejemplos.html"><span class = "letraDiseño">Ejemplos</span></a></li>
+            <li><a href="video.html"><span class = "letraDiseño">Video</span></a></li>
+            <li><a href="bibliografia.html"><span class = "letraDiseño">Bibliografía</span></a></li> 
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <ul class="sidenav #852996 pink lighten-5" id="mobile-demo">
+   <li><a href="index.html"><span class = "letraDiseño">Inicio</span></a></li>
+   <li><a href="objetivo.html"><span class = "letraDiseño">Objetivo</span></a></li>
+   <li><a href="teoria.html"><span class = "letraDiseño">Teoría</span></a></li>
+   <li><a href="preguntas.html"><span class = "letraDiseño">Preguntas</span></a></li>
+   <li><a href="ejemplos.html"><span class = "letraDiseño">Ejemplos</span></a></li>
+   <li><a href="video.html"><span class = "letraDiseño">Video</span></a></li>
+   <li><a href="bibliografia.html"><span class = "letraDiseño">Bibliografía</span></a></li> 
+ </ul>
+ <main class = "container">
+   <ul class="pagination">
+    <li class="waves-effect"><a href="teoria.html">Análisis combinatorio y notación</a></li>
+    <li class="active"><a href="teoria3.html">Inducción y recursión</a></li>
+  </ul>
+  <h1 class = "titulosGenerales">Inducción y recursión</h1>
+  <br>
+  <h2 class = "subtitulosGenerales">Inducción</h2>
+  <p class = "parrafos">En la inducción matemática o inducción completa se hace uso de los números naturales, en donde se supone que hay una cierta cantidad menor de números para los que es válida una propiedad. Además, si esa propiedad es válida para n, debe serlo para n+1.
+  </p>
+
+  
+  <h1 class="subtitulosPeques"><i><center>Inducción matemática (definición formal)</center></i></h1>
+  <p class = "subtitulosGenerales"></p>
+  <p class = "parrafos">En la inducción matemática o inducción completa se hace uso de los números naturales, en donde se supone que hay una cierta cantidad menor de números para los que es válida una propiedad. Además, si esa propiedad es válida para n, debe serlo para n+1.</p>
+    <h1 class="subtitulosPeques"><i><center>Mecanismo de demostración</center></i></h1>
+  <p class = "container citas centrar">
+    <p class = "parrafos">Para todo n, se puede demostrar P(n) llevando a cabo los siguientes pasos:</p>
+    <ul class="collection with-header">
+      <li class="collection-item">1.  Base inductiva. Se demuestra P(0).</li>
+      <li class="collection-item">2.  Hipótesis inductiva. Se supone P(n).</li>
+      <li class="collection-item">3.  Se demuestra con esta hipótesis. Se fija n y se deriva P(n+1).</li>
+      <li class="collection-item">4.  Se prescinde de la hipótesis. Se concluye que P(n) -> P(n+1) y se prescinde de P(n). Por consiguiente, P(n) ya no es necesariamente cierto.</li>
+      <li class="collection-item">5.  Se generaliza.</li>
+      <li class="collection-item">6.  Conclusión. Partiendo de que la base de la inducción y del paso inductivo se concluye que para todo n, P(n). </li>
+    </ul>
+  </p>
+  <p class="parrafos"><i>Principio de inducción</i></p>
+  <p>La siguiente propiedad pertenece a los números naturales.</p>
+  <p class = "parrafos">Si un conjunto de números naturales A tiene las propiedades:</p>
+  <p class = "container citas centrar">
+    <ul class="collection with-header">
+      <li class="collection-item">a) 0 pertenece a A, es decir 0 Є A.</li>
+      <li class="collection-item">b) Si n pertenece a A, entonces el siguiente S(n) sino también pertenece al conjunto A; esto es, (n Є A => S(n) Є A).</li>
+    </ul>
+  </p>
+  <p class ="parrafos">Entonces el conjunto A es necesariamente igual a N *.</p>
+  
+  <p class="parrafos">Esto se expresa en palabras de la siguiente forma:</p>
+  <p class="citas container">
+    "Suponiendo que para todo número natural n, mayor o igual que n0, es dada una proposición P(n)susceptible de ser verdadera o falsa. Si resulta que P(n0) es cierta y la verdad de P(n) implica la de P (n + 1), cualquiera que sea el número natural n, entonces las proposiciones P(k), k>= n0 son todas verdaderas."
+  </p>
+    <h1 class="subtitulosPeques"><i><center>Axioma de Peano</center></i></h1>
+  <p class = "container citas centrar">
+    <p class = "parrafos">Peano estableció ciertas propiedades simples (postulados) que permiten construir los números naturales:</p>
+    <ul class="collection with-header">
+      <li class="collection-item">Sea N, un conjunto no vacío tal que:</li>
+      <li class="collection-item">1. Axioma o postulado I.   l Є N.</li>
+      <li class="collection-item">2. Axioma o postulado II.  Para cada n Є N existe un único n* Є N, llamado siguiente o sucesor.</li>
+      <li class="collection-item">3. Axioma o postulado III. Para cada n Є N se tiene que n* es diferente de 1.</li>
+      <li class="collection-item">4. Axioma o postulado IV.  Si m, n Є N y m* = n*, entonces m = n.</li>
+      <li class="collection-item">5. Axioma o postulado V.   Todo subconjunto de S de N que tenga las propiedades:
+        <ul class="container">
+          <li>
+            i.  l Є S.
+          </li>
+          <li>ii. S* Є S, siempre que s Є S, es el mismo N.</li>
+        </ul>
+      </li>
+    </ul>
+  </p>
+  <h2 class = "subtitulosGenerales">Recursión</h2>
+  <p class = "parrafos">Las demostraciones por recursión son demostraciones inductivas que no necesariamente aplican a los números naturales. Estas son más generales que la inducción matemática, además de que podemos demostrarla por medio de recursión, lo que nos lleva a concluir que todas las demostraciones por recursión también pueden reducir a una demostración por inducción sobre los números naturales.
+  </p>
+  <p class = "parrafos">
+    Por supuesto, estas demostraciones no están limitadas ni mucho menos a expresiones del cálculo proposicional, pero esta no puede ser aplicable a no ser que las sucesiones descendentes finalicen y a no ser que se pueda demostrar la propiedad relevante para todos los elementos mínimos de la sucesión.
+  </p>
+  <p class="parrafos"><i>Definiciones recursivas</i></p>
+  <p class="parrafos">Por definición, todas las demostraciones de este tipo, deben basarse en la definición de dominio, debido a que proporcionan las premisas necesarias sobre las cuales se pueden construir las demostraciones.</p> 
+    <h1 class="subtitulosPeques"><i><center>El principio de demostración por recursividad</center></i></h1>
+  <h2 class = "subtitulosGenerales"><i></i></h2>
+  <p class = "parrafos">Para demostrar que para todo x P(x) es cierta, es preciso realizar los siguientes pasos:</p>
+  <ul class="collection">
+    <li class="collection-item">• Dominio bien fundado: Hay que seleccionar un predicado G y es preciso demostrar que  todas las sucesiones G son finitas.</li>
+    <li class="collection-item">• Base inductiva: Si x es mínima hay que demostrar que P(x) es cierto.</li>
+    <li class="collection-item">• Hipótesis inductiva. Se selecciona un x arbitrario y se asume que P(x) es cierto para todos aquellos que satisfagan G(x,y).</li>
+    <li class="collection-item">• Paso inductivo: Se demuestra P(x).</li>
+    <li class="collection-item">• Conclusión: Se concluye que para todo x, es válida P(x).</li>
+  </ul>
+</main>
+</body>
+<footer class = "page-footer colorcito2">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text"><span class = "letraFooter">Contáctanos</span></h5>
+        <p class="grey-text text-lighten-4">Para obtener mayor información dirígete a la Sala de Multimedia ubicada en:</p>
+        <ul>
+          <li>Edificio Q "Luis G. Valdés", salón Q006, Planta Baja, Facultad de ingeniería, UNAM.</li>
+        </ul>
+      </div>
+      <div class="col l4 offset-l1 s12">
+        <h5 class="white-text"><span class = "letraFooter"></span></h5>
+        <ul>
+          <img src="img/escudo49.png" class = "tamañoEscudo">
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      © 2018 Copyright 
+    </div>
+  </div>
+</footer>
+<script src="js/jquery.js"></script>
+<script src="js/materialize.js"></script>
+<!--<script src="js/materialize.min.js"></script>-->
+<script src="js/app.js"></script>
+</html>

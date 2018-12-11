@@ -1,0 +1,167 @@
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+video{
+  margin: 20px 350px;
+}
+  main {
+    flex: 1 0 auto;
+  }
+
+  .nav-wrapper {
+    background-color: #850000 !important;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .colorcito2{
+  	color: white;
+  	font-family: 'Assistant', sans-serif;
+  	background: #0163B7;
+  }
+
+  .colorcito1{
+  	font-family: 'Assistant', sans-serif;
+    /*background: #0163B7 ;*/
+    color: #5BCAF3;
+    background:linear-gradient(#0163B7, #602476);
+  }
+
+  .colorcito3{
+  	font-family: 'Assistant', sans-serif;
+  	background: #E18212;
+  }
+  .colorcito4{
+    color: white;
+    background: #DC94F6;
+  }
+  .colorcito5{
+    color: white;
+    background: #9F4ABE;
+  }
+
+  .letraDiseño{
+    color: black;
+    font-family: 'Assistant', sans-serif;
+  	font-size: 25px;
+  }
+
+  .tamañoEscudo{
+  	height: 120px;
+  	width: 120px;
+  }
+
+  .tamañoUNAM{
+    width: auto;
+    height: 300px;
+  }
+
+  .contenedor {
+    margin: 10px 50px;
+    padding: 10px;
+    height: auto;
+  }
+  .letraFooter{
+  	color:black;
+    font-weight: bold;
+  }
+  .colorLinks{
+    font-style: italic;
+  }
+
+  .emergenciaJava{
+    color: white;
+    font-family: 'Assistant', sans-serif;
+    font-size: 30px;
+    background: #0163B7
+  }
+  
+  .subtitulosPeques{
+    font-size: 32px;
+  }
+
+  .e1{
+    background: #EDF342;
+  }
+
+  .e2{
+    background: #96F818;
+  }
+
+  .e3{
+    background: #2EF54A;
+  }
+
+  .b1{
+    background: #ED83F7;
+  }
+
+  .b2{
+    background: #BD53EF;
+  }
+
+  .b3{
+    background: #6C5DF8;
+  }
+  
+  .boton-personalizado-2 {
+    color: white;
+    font-family: 'Assistant', sans-serif;
+    font-size: 30px;
+    font-weight:600;
+    font-size:20px;
+    color:#ffffff;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:15px;
+    padding-right:15px;
+    background-color:#4B2080;
+  }
+   
+  /* Este es el estilo al poner el cursor encima del boton*/
+  .boton-personalizado-2:hover {
+  background-color:#6284F3;
+  }
+
+  .fondoEmergencia{
+    background-color: white;
+  }
+
+  .preguntasTitulos{
+    font-size: 23px;
+    font-style: bold;
+    font-family: 'K2D', sans-serif;
+  }
+
+  .preguntasOpciones{
+    font-size: 17px;
+    font-family: 'K2D', sans-serif;
+  }
+
+  .titulosGenerales{
+    text-align: center;
+    font-size: 45px;
+  }
+
+  .subtitulosGenerales{
+    text-align: left;
+    font-size: 32px;
+  }
+
+  .parrafos{
+    text-align: justify;
+    font-size: 20px;
+  }
+
+  .citas{
+    text-align: justify;
+    font-size: 15px;
+  }
+
+  .centrar{
+    justify-content: center;
+    text-align: center;
+  }

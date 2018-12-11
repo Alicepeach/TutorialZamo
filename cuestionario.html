@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Cuestionario</title>
+	<link rel="stylesheet" href="css/style.css">
+	<title>Página con Materialize</title>
+  <script src="http://code.jquery.com/jquery.js"></script>
+</head>
+    <body>
+    <div id = "prub"></div>    
+    <div id = 'pregunta1'></div>
+    <div id = 'respuestas1'></div>
+
+    <div id = 'pregunta2'></div>
+    <div id = 'respuestas2'></div>
+
+    <div id = 'pregunta3'></div>
+    <div id = 'respuestas3'></div>
+
+    <div id = 'pregunta4'></div>
+    <div id = 'respuestas4'></div>
+
+    <div id = 'pregunta5'></div>
+    <div id = 'respuestas5'></div>
+
+<input type="button" value= "Calificar" onclick="calificacion()">
+
+<script>
+  var correctas = 0;
+
+  function incisos(numeritoAleatorio) {
+    var posibilidades = "";
+    for( var i = 0; i < arregloDeRespuestas[numeritoAleatorio].length; i ++){
+    posibilidades += '<input type="radio" name = "preguntitas'+numeritoAleatorio+'" value= "'+i+'"><label>'+ arregloDeRespuestas[numeritoAleatorio][i] + '</label><br>';
+    }
+    return posibilidades;
+  }
+
+  var arregloDePreguntas = [
+  'Primer pregunta', 'Segunda pregunta', 'Tercer pregunta', 'Cuarta pregunta', 'Quinta pregunta'];
+
+  var arregloDeRespuestas = [
+  ['Respuesta11', 'Respuesta12', 'Respuesta13', 'Respuesta14'],['Respuesta21', 'Respuesta22', 'Respuesta23','Respuesta24'],['Respuesta31', 'Respuesta32', 'Respuesta33','Respuesta34'],['Respuesta41', 'Respuesta42', 'Respuesta43','Respuesta44'],['Respuesta51', 'Respuesta52','Respuesta53','Respuesta54']];
+
+  var arregloDeIncisosRespuestasCorrectas= ['0', '1', '2', '3', '0'];
+
+  /*Validación de preguntas aleatorias no repetidas*/
+  var cantidadNumeros = arregloDePreguntas.length;
+  var arregloDeAleatorios = []
+  while(arregloDeAleatorios.length < cantidadNumeros ){
+    var numeroAleatorio = Math.floor(Math.random()*cantidadNumeros);
+    var existe = false;
+    for(var i=0;i<arregloDeAleatorios.length;i++){
+    if(arregloDeAleatorios [i] == numeroAleatorio){
+          existe = true;
+          break;
+      }
+    }
+    if(!existe){
+      arregloDeAleatorios[arregloDeAleatorios.length] = numeroAleatorio;
+    }
+
+  }
+
+  document.write("números aleatorios : " + arregloDeAleatorios);
+
+  var aleatorio1 = arregloDeAleatorios[0];
+  var aleatorio2 = arregloDeAleatorios[1];
+  var aleatorio3 = arregloDeAleatorios[2];
+  var aleatorio4 = arregloDeAleatorios[3];
+  var aleatorio5 = arregloDeAleatorios[4];
+ 
+  document.getElementById('pregunta1').innerHTML = arregloDePreguntas[aleatorio1];
+  document.getElementById('respuestas1').innerHTML = incisos(aleatorio1);
+
+  document.getElementById('pregunta2').innerHTML = arregloDePreguntas[aleatorio2];
+  document.getElementById('respuestas2').innerHTML = incisos(aleatorio2);
+
+  document.getElementById('pregunta3').innerHTML = arregloDePreguntas[aleatorio3];
+  document.getElementById('respuestas3').innerHTML = incisos(aleatorio3);
+  
+  document.getElementById('pregunta4').innerHTML = arregloDePreguntas[aleatorio4];
+  document.getElementById('respuestas4').innerHTML = incisos(aleatorio4);
+  
+  document.getElementById('pregunta5').innerHTML = arregloDePreguntas[aleatorio5];
+  document.getElementById('respuestas5').innerHTML = incisos(aleatorio5);
+
+  var correctas = 0;
+
+  //function comprobar(numeritoAleatorio){
+    
+  var respuesta = $("input[name= 'preguntitas0']:checked").val();
+  //var respuesta = $('#MyForm.preguntitas'+numeritoAleatorio+':checked').val();
+  if (respuesta == arregloDeIncisosRespuestasCorrectas[numeritoAleatorio]){
+    correctas++;
+  }
+    //return respuesta;
+  //}
+  document.getElementById('prub').innerHTML = respuesta;
+
+  /*comprobar(aleatorio2);
+  comprobar(aleatorio3);
+  comprobar(aleatorio4);
+  comprobar(aleatorio5);
+*/
+
+  function calificacion(){
+    alert(correctas);
+  }
+
+</script>
+<script src="js/jquery.js"></script>
+<script src="js/app.js"></script>
+</html>
